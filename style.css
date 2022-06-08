@@ -1,0 +1,79 @@
+/* .wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.full-screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.full-screen__body {
+  padding: 50px 15px;
+  /* робимо відео із затемненням для покращення читабельності тексту */
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.full-screen__title {
+  font-size: 50px;
+  letter-spacing: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(86, 86, 227);
+}
+@media (max-width: 800px) {
+  .full-screen__title {
+    font-size: 30px;
+  }
+}
+.full-screen__text {
+  font-size: 18px;
+  letter-spacing: 15px;
+  font-weight: 700;
+  color: #e3e314;
+}
+.full-screen__video {
+  /* paralax effect */
+  position: fixed;
+  /* -----------Для видалення паралакс-ефекту потрібно взяти абсолютне позиціонування----- */
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* щоб відео повністю вписувалось в повноекранний блок потрібно використати наступну властивість  */
+  object-fit: cover;
+}
+.content {
+  /* paralax effect */
+  position: relative;
+  z-index: 5;
+  /* -----Для видалення паралакс-ефекту потрібно закоментувати два верхніх рядки----- */
+  padding: 30px 0;
+  background-color: #794f45;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
